@@ -30,6 +30,7 @@ public class UserDaoJDBCImpl implements UserDao {
             statement.executeUpdate(sqlComand);
 
         } catch (SQLException e) {
+            e.printStackTrace();
             throw new RuntimeException(e);
         }
 
@@ -44,6 +45,7 @@ public class UserDaoJDBCImpl implements UserDao {
             preparedStatement.executeUpdate();
 
         } catch (SQLException e) {
+            e.printStackTrace();
             throw new RuntimeException(e);
         }
 
@@ -55,6 +57,7 @@ public class UserDaoJDBCImpl implements UserDao {
             preparedStatement.setLong(1, id);
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
+            e.printStackTrace();
             throw new RuntimeException(e);
         }
     }
@@ -74,6 +77,7 @@ public class UserDaoJDBCImpl implements UserDao {
                 users.add(user);
             }
         } catch (SQLException e) {
+            e.printStackTrace();
             throw new RuntimeException(e);
         }
         return users;
@@ -85,6 +89,7 @@ public class UserDaoJDBCImpl implements UserDao {
             statement.executeUpdate(sqlComand);
 
         } catch (SQLException e) {
+            e.printStackTrace();
             throw new RuntimeException(e);
         }
     }
